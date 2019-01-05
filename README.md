@@ -1,0 +1,2 @@
+# quake-watch
+You might or might not know already but earthquakes can not be predicted. What this app strives to do is to help bring awareness of when the next earthquake could possibly come so people can prepare for it. Quake Watch analyzes past earthquakes and finds a pattern which can give a rough estimate of when the next earthquake will strike. The analyzing and pattern finding is accomplished through machine learning algorithms. 
