@@ -1,1 +1,3 @@
 quake_watch/data/
+*.pkl
+*.h5
