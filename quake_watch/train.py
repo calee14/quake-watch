@@ -64,3 +64,6 @@ model.fit(X_train, y_train, batch_size=10, epochs=20, verbose=1, validation_data
 print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_loss, test_acc))
 
 model.save('earthquake.h5')
+
+results = model.predict(X_test)
+print(results)
