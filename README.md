@@ -7,3 +7,6 @@ num_features ~ 17,000
 neurons = 16
 Evaluation result on Test Data : Loss = 0.5035486001953181, accuracy = 0.9815531769528582
 ```
+
+# Notes:
+- Planning to use a different type of model since neural network won't predict.
