@@ -19,8 +19,8 @@ date = '10/17/2019 5:4:15'
 ts = datetime.datetime.strptime(date, '%m/%d/%Y %H:%M:%S')
 timestamp = time.mktime(ts.timetuple())
 columns = ['Timestamp', 'Latitude', 'Longitude']
-data = np.array([[timestamp], [37.7749], [122.4194]]).T
-evaluate_data = pd.DataFrame(data, columns=columns)
+data = np.array([[timestamp, 37.7749, 122.4194]]).T
+# evaluate_data = pd.DataFrame(data, columns=columns)
 # final_data = evaluate_data[['Timestamp', 'Latitude', 'Longitude']]
 results = model.predict(X_test)
 print(results)
