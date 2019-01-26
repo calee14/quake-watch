@@ -45,6 +45,14 @@ final_data = final_data[final_data.Timestamp != 'ValueError']
 X = final_data[['Timestamp', 'Latitude', 'Longitude']]
 y = final_data[['Magnitude', 'Depth']]
 
+X = X.values
+y = y.values
+
+X, y = np.array(X), np.array(y)
+
+X = np.reshape(X, (X.shape[0], X.shape[1], 1))
+# y = np.reshape(y, (y.shape[0], y.shape[1], 1))
+
 # split the data into a training set and testing set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
@@ -52,14 +60,13 @@ print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
 model = Sequential()
 model.reset_states()
 
-model.add(LSTM(input_dim=2, output_dim=100, input_shape=(3,), return_sequences=True))
+model.add(LSTM(16, return_sequences=False, input_shape=(3, 1)))
 model.add(Dropout(0.5))
 model.add(Dense(2, activation='softmax'))
 
 model.compile(optimizer='SGD', loss='squared_hinge', metrics=['accuracy'])
 
-model.fit(X_train, y_train, batch_size=10, epochs=10, verbose=1, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, batch_size=3, epochs=10, verbose=1, validation_data=(X_test, y_test))
 
 [test_loss, test_acc] = model.evaluate(X_test, y_test)
 print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_loss, test_acc))
-
