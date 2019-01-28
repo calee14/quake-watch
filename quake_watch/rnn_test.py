@@ -42,6 +42,10 @@ train_df['Timestamp'] = timeStamp.values
 final_data = train_df.drop(['Date', 'Time'], axis=1)
 final_data = final_data[final_data.Timestamp != 'ValueError']
 
+from sklearn.preprocessing import MinMaxScaler
+sc = MinMaxScaler(feature_range = (0, 1))
+final_data = sc.fit_transform(final_data)
+
 X = final_data[['Timestamp', 'Latitude', 'Longitude']]
 y = final_data[['Magnitude', 'Depth']]
 
@@ -70,3 +74,7 @@ model.fit(X_train, y_train, batch_size=3, epochs=10, verbose=1, validation_data=
 
 [test_loss, test_acc] = model.evaluate(X_test, y_test)
 print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_loss, test_acc))
+
+results = model.predict(X_test)
+results = sc.inverse_transform(results)
+print(results)
