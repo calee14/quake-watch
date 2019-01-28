@@ -12,3 +12,5 @@ Evaluation result on Test Data : Loss = 0.0035595247093346324, accuracy = 0.9815
 # Notes:
 - [X] Planning to use a different type of model since neural network won't predict.
 - [ ] Scale the data. https://www.kdnuggets.com/2018/11/keras-long-short-term-memory-lstm-model-predict-stock-prices.html
+- [ ] Figure out why the training can be really bad. Inconsistent results
+	- [ ] Maybe add more LSTMs
