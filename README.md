@@ -15,3 +15,4 @@ Evaluation result on Test Data : Loss = 0.0035595247093346324, accuracy = 0.9815
 - [ ] Test the new scaling code
 - [ ] Figure out why the training can be really bad. Inconsistent results
 	- [ ] Maybe add more LSTMs
+- [ ] Test on some user created data
