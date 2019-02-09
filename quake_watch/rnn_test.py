@@ -50,14 +50,9 @@ from sklearn.preprocessing import MinMaxScaler
 X = final_data[['Timestamp', 'Latitude', 'Longitude']]
 y = final_data[['Magnitude', 'Depth']]
 
-X_scaler = MinMaxScaler(feature_range=(0, 1))
 y_scaler = MinMaxScaler(feature_range=(0, 1))
-
-X_scaled_features = X_scaler.fit_transform(X.values)
-y_scaled_features = y_scaler.fit_transform(y.values)
-
-X = pd.DataFrame(X_scaled_features, index=X.index, columns=X.columns)
-y = pd.DataFrame(y_scaled_features, index=y.index, columns=y.columns)
+y_scaler = y_scaler.fit(y.values)
+print('Min: %s, Max: %s' % (str(y_scaler.data_min_), str(y_scaler.data_max_)))
 
 X = X.values
 y = y.values
@@ -80,10 +75,12 @@ model.add(Dense(2, activation='softmax'))
 
 model.compile(optimizer='SGD', loss='squared_hinge', metrics=['accuracy'])
 
-model.fit(X_train, y_train, batch_size=3, epochs=2, verbose=1, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, batch_size=3, epochs=1, verbose=1, validation_data=(X_test, y_test))
 
 [test_loss, test_acc] = model.evaluate(X_test, y_test)
 print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_loss, test_acc))
+
+print(X_test[0:25])
 
 results = model.predict(X_test)
 try:
