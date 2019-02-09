@@ -65,6 +65,10 @@ X = np.reshape(X, (X.shape[0], X.shape[1], 1))
 # split the data into a training set and testing set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+np.save('X_train.npy', X_train)
+np.save('X_test.npy', X_test)
+np.save('y_train.npy', y_train)
+np.save('y_test.npy', y_test)
 
 model = Sequential()
 model.reset_states()
