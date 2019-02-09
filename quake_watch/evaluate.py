@@ -11,7 +11,8 @@ with open('X_test.pkl', 'rb') as f:
 with open('y_test.pkl', 'rb') as f:
     y_test = pickle.load(f)
 
-model = load_model('earthquake.h5')
+model = load_model('eq.h5')
+model.load_weights('eq_weights')
 [test_loss, test_acc] = model.evaluate(X_test, y_test)
 print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_loss, test_acc))
 
