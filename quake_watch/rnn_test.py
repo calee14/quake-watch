@@ -42,8 +42,22 @@ train_df['Timestamp'] = timeStamp.values
 final_data = train_df.drop(['Date', 'Time'], axis=1)
 final_data = final_data[final_data.Timestamp != 'ValueError']
 
+from sklearn.preprocessing import MinMaxScaler
+# sc = MinMaxScaler(feature_range = (0, 1))
+# scaled_features = sc.fit_transform(final_data.values)
+# final_data = pd.DataFrame(scaled_features, index=final_data.index, columns=final_data.columns)
+
 X = final_data[['Timestamp', 'Latitude', 'Longitude']]
 y = final_data[['Magnitude', 'Depth']]
+
+X_scaler = MinMaxScaler(feature_range=(0, 1))
+y_scaler = MinMaxScaler(feature_range=(0, 1))
+
+X_scaled_features = X_scaler.fit_transform(X.values)
+y_scaled_features = y_scaler.fit_transform(y.values)
+
+X = pd.DataFrame(X_scaled_features, index=X.index, columns=X.columns)
+y = pd.DataFrame(y_scaled_features, index=y.index, columns=y.columns)
 
 X = X.values
 y = y.values
@@ -72,4 +86,9 @@ model.fit(X_train, y_train, batch_size=3, epochs=2, verbose=1, validation_data=(
 print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_loss, test_acc))
 
 results = model.predict(X_test)
-print(results[0:50])
+try:
+    results = y_scaler.inverse_transform(results)
+    print(results)
+except Exception as e:
+    print(e)
+    print(results)
