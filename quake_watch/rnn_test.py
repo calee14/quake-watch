@@ -79,7 +79,7 @@ model.add(Dense(2, activation='softmax'))
 
 model.compile(optimizer='SGD', loss='squared_hinge', metrics=['accuracy'])
 
-model.fit(X_train, y_train, batch_size=3, epochs=10, verbose=1, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, batch_size=10, epochs=1, verbose=1, validation_data=(X_test, y_test))
 model.save('eq.h5')
 model.save_weights('eq_weights.h5')
 
@@ -89,9 +89,9 @@ print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_lo
 print(X_test[0:25])
 
 results = model.predict(X_test)
-try:
-    results = y_scaler.inverse_transform(results)
-    print(results)
-except Exception as e:
-    print(e)
-    print(results)
+# try:
+#     results = y_scaler.inverse_transform(results)
+#     print(results)
+# except Exception as e:
+# print(e)
+print(results[0:50])
