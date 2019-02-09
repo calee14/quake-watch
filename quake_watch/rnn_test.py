@@ -66,7 +66,10 @@ model.add(Dense(2, activation='softmax'))
 
 model.compile(optimizer='SGD', loss='squared_hinge', metrics=['accuracy'])
 
-model.fit(X_train, y_train, batch_size=3, epochs=10, verbose=1, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, batch_size=3, epochs=2, verbose=1, validation_data=(X_test, y_test))
 
 [test_loss, test_acc] = model.evaluate(X_test, y_test)
 print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_loss, test_acc))
+
+results = model.predict(X_test)
+print(results[0:50])
