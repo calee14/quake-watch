@@ -16,3 +16,6 @@ Evaluation result on Test Data : Loss = 0.0035595247093346324, accuracy = 0.9815
 - [ ] Figure out why the training can be really bad. Inconsistent results
 	- [ ] Maybe add more LSTMs
 - [ ] Test on some user created data
+- Options:
+ - [ ] tell users the magnitude of the next earthquake in their area
+ - [ ] Try to fix model with timestamp values
