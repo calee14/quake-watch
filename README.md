@@ -19,7 +19,7 @@ Evaluation result on Test Data : Loss = 0.0035595247093346324, accuracy = 0.9815
 - Options:
  - [ ] tell users the magnitude of the next earthquake in their area
  - [ ] Try to fix model with timestamp values
-
+- [ ] Remove hour time stamp (Just keep year, month, and day)
 # Resources:
 - Data:
  - http://www.isc.ac.uk/iscgem/
