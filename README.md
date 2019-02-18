@@ -22,4 +22,5 @@ Evaluation result on Test Data : Loss = 0.0035595247093346324, accuracy = 0.9815
 - [ ] Remove hour time stamp (Just keep year, month, and day)
 # Resources:
 - Data:
- - http://www.isc.ac.uk/iscgem/
+ - http://service.scedc.caltech.edu/eq-catalogs/date_mag_loc.php
+ - (Note now looking for earthquakes in CA
