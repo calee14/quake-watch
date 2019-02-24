@@ -26,8 +26,7 @@ Evaluation result on Test Data : Loss = 0.0035595247093346324, accuracy = 0.9815
  - (Note now looking for earthquakes in CA)
  - http://scedc.caltech.edu/research-tools/downloads.html#catalogs (Download the SCEDC catalog)
 # What I learned:
-What I learned
-In the beginning of this project, I believed I could create a machine learning model based on
+  In the beginning of this project, I believed I could create a machine learning model based on
 past earthquakes that already had happened. I was hoping my model would be able to discover a 
 pattern and give me a reasonable prediction of the next earthquake, but that was not the case. 
 I learned that my model was overfitting and the model quickly learned to recognize the X_train 
@@ -35,7 +34,7 @@ dataset and output the exact answer that corresponded with each feature. My data
 a timestamp as a feature which didn’t help accelerate the learning process of my model. In 
 fact, I don’t think the timestamp value had any effect on the learning of my model. The last 
 reason why my model wasn’t working was the data wasn’t preprocessed properly.
-One of the most important problems to avoid in machine learning is overfitting. When testing 
+  One of the most important problems to avoid in machine learning is overfitting. When testing 
 the model I realized that the accuracy on the training data and the test data would be above 
 ninety-eight percent. This realization was surprising and fantastic at first, but when I 
 entered some of my own values into the model the outputs wasn’t what I expected. The values 
@@ -43,7 +42,7 @@ that were outputted where very close to each other. At first I thought it was a 
 and that the model was outputting the values based off the lowest and highest values, but the 
 model still had the same relative values. The outputs with scaling didn’t match the values 
 that of the outputs of the test data at all. 
-Choosing the data is almost as important as choosing the right model. In my dataset, I have a 
+  Choosing the data is almost as important as choosing the right model. In my dataset, I have a 
 date represented as a timestamp and I feed it into the timestamp. Through extensive testing I
 learned that the timestamp didn’t have much effect on the training. I would enter a timestamp 
 number and run it into the model. The model would output the same value every time meaning 
@@ -55,7 +54,7 @@ method where the programmer creates a lookback function. I realized this was how
 could predict things in the future. I could’ve done the same but my data could possibly have 
 two earthquakes in the same day and time which would be extremely difficult for the model and 
 me to figure out how to deal with it. 
-From this learning experience I learned much about machine learning and what to do, but mainly
+  From this learning experience I learned much about machine learning and what to do, but mainly
 what not to do. I figured out the importance of finding or making a dataset with the correct 
 features and how to preprocess them correctly. Learning about and experiencing overfitting is
 always a good learning lesson. What I’m probably going to do now is run the dataset through a 
