@@ -32,8 +32,7 @@ for d, t in zip(earthquakes['Date'], earthquakes['Time']):
         # changing the date time features into numeric values
         ts = datetime.datetime.strptime(d+' '+t, '%m/%d/%Y %H:%M:%S')
         timestamp.append(time.mktime(ts.timetuple()))
-    except Exception as e:
-    	print(e)
+    except:
         # print('ValueError')
         timestamp.append('ValueError')
 

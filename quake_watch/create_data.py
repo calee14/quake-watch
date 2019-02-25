@@ -16,6 +16,10 @@ while year <= 2019:
 			date = features[0]
 			date = datetime.datetime.strptime(date, '%Y/%m/%d').strftime('%m/%d/%Y')
 			features[0] = date
+			# remove the milliseconds
+			time = features[1]
+			time = time[:-3]
+			features[1] = time
 			dataset.append(features)
 	f.close()
 	year += 1
