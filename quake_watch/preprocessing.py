@@ -16,7 +16,7 @@ warnings.filterwarnings(action="ignore", message="^internal gelsd")
 import pandas as pd
 
 def load_earthquake_data(path='data/'):
-    csv_path = os.path.join(path, 'database.csv')
+    csv_path = os.path.join(path, 'database2.csv')
     return pd.read_csv(csv_path)
 
 earthquakes = load_earthquake_data()
@@ -32,7 +32,8 @@ for d, t in zip(earthquakes['Date'], earthquakes['Time']):
         # changing the date time features into numeric values
         ts = datetime.datetime.strptime(d+' '+t, '%m/%d/%Y %H:%M:%S')
         timestamp.append(time.mktime(ts.timetuple()))
-    except:
+    except Exception as e:
+    	print(e)
         # print('ValueError')
         timestamp.append('ValueError')
 
