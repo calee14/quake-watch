@@ -28,7 +28,7 @@ Evaluation result on Test Data : mean squared error = 1.9729584493393746, score 
  - https://developers.google.com/maps/documentation/javascript/examples/circle-simple (For drawing circles on maps radius measured in meters) 
 # Code:
 ```
-# used for calculating the radius of an earthquake
+# used for calculating the radius of an earthquake in meters
 var radius = Math.sqrt(Math.pow(10, magnitude))/50000);
 var radius = Math.pow(2, magnitude);
 var radius = (Math.exp(magnitude/1.01-0.13))*1000;
