@@ -14,11 +14,16 @@ with open('y_test.pkl', 'rb') as f:
     y_test = pickle.load(f)
 
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.externals import joblib
 
 reg = RandomForestRegressor(random_state=42)
 reg.fit(X_train, y_train)
 
 print(reg.score(X_test, y_test))
+
+# save the model to disk
+filename = 'finalized_model.sav'
+joblib.dump(model, filename)
 
 from sklearn.model_selection import GridSearchCV
 
@@ -27,6 +32,7 @@ parameters = {'n_estimators':[10, 20, 50, 100, 200, 500]}
 grid_obj = GridSearchCV(reg, parameters)
 grid_fit = grid_obj.fit(X_train, y_train)
 best_fit = grid_fit.best_estimator_
+print(best_fit)
 best_fit.predict(X_test)
 
 best_fit.score(X_test, y_test)

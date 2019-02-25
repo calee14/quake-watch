@@ -6,7 +6,7 @@ recurrent neural network model
 epochs = 10
 num_features ~ 17,500
 neurons = 16
-Evaluation result on Test Data : Loss = 0.0035595247093346324, accuracy = 0.9815531769528582
+Evaluation result on Test Data : score = 0.6813909079539409
 ```
 
 # Notes:

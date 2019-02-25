@@ -4,6 +4,7 @@ import datetime
 import time
 import numpy as np
 import pandas as pd
+from sklearn.externals import joblib
 
 # Getting back the objects:
 with open('X_test.pkl', 'rb') as f:
@@ -11,9 +12,12 @@ with open('X_test.pkl', 'rb') as f:
 with open('y_test.pkl', 'rb') as f:
     y_test = pickle.load(f)
 
-model = load_model('earthquake.h5')
-[test_loss, test_acc] = model.evaluate(X_test, y_test)
-print("Evaluation result on Test Data : Loss = {}, accuracy = {}".format(test_loss, test_acc))
+filename = 'finalized_model.sav'
+
+# load the model from disk
+loaded_model = joblib.load(filename)
+result = loaded_model.score(X_test, Y_test)
+print(result)
 
 date = '10/17/2019 5:4:15'
 ts = datetime.datetime.strptime(date, '%m/%d/%Y %H:%M:%S')
