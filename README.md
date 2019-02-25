@@ -6,7 +6,7 @@ recurrent neural network model
 epochs = 10
 num_features ~ 17,500
 neurons = 16
-Evaluation result on Test Data : score = 0.6813909079539409
+Evaluation result on Test Data : mean squared error = 1.9729584493393746, score = 0.6813909079539409
 ```
 
 # Notes:
