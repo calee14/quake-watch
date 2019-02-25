@@ -25,6 +25,15 @@ Evaluation result on Test Data : mean squared error = 1.9729584493393746, score 
  - http://service.scedc.caltech.edu/eq-catalogs/date_mag_loc.php
  - (Note now looking for earthquakes in CA)
  - http://scedc.caltech.edu/research-tools/downloads.html#catalogs (Download the SCEDC catalog)
+ - https://developers.google.com/maps/documentation/javascript/examples/circle-simple (For drawing circles on maps radius measured in meters) 
+# Code:
+```
+# used for calculating the radius of an earthquake
+var radius = Math.sqrt(Math.pow(10, magnitude))/50000);
+var radius = Math.pow(2, magnitude);
+var radius = (Math.exp(magnitude/1.01-0.13))*1000;
+
+ ```
 # What I learned:
 - In the beginning of this project, I believed I could create a machine learning model based on
 past earthquakes that already had happened. I was hoping my model would be able to discover a 
