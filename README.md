@@ -4,7 +4,6 @@ Earthquakes can cause lots of destruction and harm which makes it one of the wor
 ```
 random forest regressor
 num_features ~ 17,500
-neurons = 16
 Evaluation result on Test Data : mean squared error = 1.9729584493393746, score = 0.6813909079539409
 ```
 
