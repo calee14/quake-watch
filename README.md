@@ -14,7 +14,7 @@ Evaluation result on Test Data : mean squared error = 1.9729584493393746, score 
 - [ ] Figure out why the training can be really bad. Inconsistent results
 	- [ ] Maybe add more LSTMs
 - [ ] Test on some user created data
-- Options:
+- [ ] Options:
  - [ ] tell users the magnitude of the next earthquake in their area
  - [ ] Try to fix model with timestamp values
 - [ ] Remove hour time stamp (Just keep year, month, and day)
