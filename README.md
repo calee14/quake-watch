@@ -11,8 +11,9 @@ Evaluation result on Test Data : mean squared error = 1.9729584493393746, score 
 - [X] Planning to use a different type of model since neural network won't predict.
 - [X] Scale the data. https://www.kdnuggets.com/2018/11/keras-long-short-term-memory-lstm-model-predict-stock-prices.html
 - [ ] Test the new scaling code
-- [ ] Figure out why the training can be really bad. Inconsistent results
-	- [ ] Maybe add more LSTMs
+- [X] Figure out why the training can be really bad. Inconsistent results
+	- [X] Maybe add more LSTMs
+	- [X] NOTE: the rnn wasn't able to make predictions based on a timestamp value
 - [ ] Test on some user created data
 - [ ] Options:
  - [ ] tell users the magnitude of the next earthquake in their area
