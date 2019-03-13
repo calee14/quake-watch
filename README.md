@@ -19,6 +19,7 @@ Evaluation result on Test Data : mean squared error = 1.9729584493393746, score 
  - [ ] tell users the magnitude of the next earthquake in their area
  - [ ] Try to fix model with timestamp values
 - [ ] Remove hour time stamp (Just keep year, month, and day)
+- [ ] Put model on a flask app
 # Resources:
 - Data:
  - http://service.scedc.caltech.edu/eq-catalogs/date_mag_loc.php
