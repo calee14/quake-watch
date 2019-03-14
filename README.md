@@ -20,6 +20,7 @@ Evaluation result on Test Data : mean squared error = 1.9729584493393746, score 
  - [ ] Try to fix model with timestamp values
 - [ ] Remove hour time stamp (Just keep year, month, and day)
 - [ ] Put model on a flask app
+- [ ] Use google maps api
 # Resources:
 - Data:
  - http://service.scedc.caltech.edu/eq-catalogs/date_mag_loc.php
@@ -28,7 +29,7 @@ Evaluation result on Test Data : mean squared error = 1.9729584493393746, score 
  - https://developers.google.com/maps/documentation/javascript/examples/circle-simple (For drawing circles on maps radius measured in meters) 
 # Code:
 ```
-# used for calculating the radius of an earthquake in meters
+# use for calculating the radius of an earthquake in meters
 var radius = Math.sqrt(Math.pow(10, magnitude))/50000);
 var radius = Math.pow(2, magnitude);
 var radius = (Math.exp(magnitude/1.01-0.13))*1000;
