@@ -22,7 +22,7 @@ Evaluation result on Test Data : mean squared error = 1.9729584493393746, score 
 - [ ] Put model on a flask app
 - [ ] Use google maps api
 # Resources:
-- Data:
+- Data and links:
  - http://service.scedc.caltech.edu/eq-catalogs/date_mag_loc.php
  - (Note now looking for earthquakes in CA)
  - http://scedc.caltech.edu/research-tools/downloads.html#catalogs (Download the SCEDC catalog)
