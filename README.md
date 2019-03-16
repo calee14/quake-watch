@@ -19,14 +19,14 @@ Evaluation result on Test Data : mean squared error = 1.9729584493393746, score 
  - [ ] tell users the magnitude of the next earthquake in their area
  - [ ] Try to fix model with timestamp values
 - [ ] Remove hour time stamp (Just keep year, month, and day)
-- [ ] Put model on a flask app
+- [ ] Put model on a flask app or maybe use django
 - [ ] Use google maps api
 # Resources:
 - Data and links:
  - http://service.scedc.caltech.edu/eq-catalogs/date_mag_loc.php
  - (Note now looking for earthquakes in CA)
  - http://scedc.caltech.edu/research-tools/downloads.html#catalogs (Download the SCEDC catalog)
- - https://developers.google.com/maps/documentation/javascript/examples/circle-simple (For drawing circles on maps radius measured in meters) 
+ - https://developers.google.com/maps/documentation/javascript/examples/circle-simple (For drawing circles on maps radius measured in meters)
 # Code:
 ```
 # use for calculating the radius of an earthquake in meters
