@@ -16,8 +16,8 @@ Evaluation result on Test Data : mean squared error = 1.9729584493393746, score 
 	- [X] NOTE: the rnn wasn't able to make predictions based on a timestamp value
 - [ ] Test on some user created data
 - [ ] Options:
- - [ ] tell users the magnitude of the next earthquake in their area
- - [X] Try to fix model with timestamp values (NOTE: figured out it wasn't possible to get accurate results)
+	- [ ] tell users the magnitude of the next earthquake in their area
+	- [X] Try to fix model with timestamp values (NOTE: figured out it wasn't possible to get accurate results)
 - [X] Remove hour time stamp (Just keep year, month, and day)
 - [ ] Put model on a flask app or maybe use django
 - [ ] Use google maps api
