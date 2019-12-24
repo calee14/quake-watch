@@ -37,7 +37,7 @@ var radius = (Math.exp(magnitude/1.01-0.13))*1000;
  ```
 # What I learned:
 - &nbsp;&nbsp;&nbsp;&nbsp; In the beginning of this project, I believed I could create a machine learning model based on
-past earthquakes that already had happened. I was hoping my model would be able to discover a 
+past earthquakes. I was hoping my model would be able to discover a 
 pattern and give me a reasonable prediction of the next earthquake, but that was not the case. 
 I learned that my model was overfitting and the model quickly learned to recognize the X_train 
 dataset and output the exact answer that corresponded with each feature. My dataset was using 
