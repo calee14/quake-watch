@@ -47,13 +47,13 @@ reason why my model wasn’t working was the data wasn’t preprocessed properly
 - &nbsp;&nbsp;&nbsp;&nbsp; One of the most important problems to avoid in machine learning is overfitting. When testing 
 the model I realized that the accuracy on the training data and the test data would be above 
 ninety-eight percent. This realization was surprising and fantastic at first, but when I 
-entered some of my own values into the model the outputs wasn’t what I expected. The values 
+entered some of my own values into the model the outputs weren’t what I expected. The values 
 that were outputted where very close to each other. At first I thought it was a scaling issue 
 and that the model was outputting the values based off the lowest and highest values, but the 
 model still had the same relative values. The outputs with scaling didn’t match the values 
 that of the outputs of the test data at all. 
 - &nbsp;&nbsp;&nbsp;&nbsp; Choosing the data is almost as important as choosing the right model. In my dataset, I have a 
-date represented as a timestamp and I feed it into the timestamp. Through extensive testing I
+date represented as a timestamp and I would feed it into the timestamp/model. Through extensive testing I
 learned that the timestamp didn’t have much effect on the training. I would enter a timestamp 
 number and run it into the model. The model would output the same value every time meaning 
 there must be something wrong with the data. I kept experimenting and I found out that the 
@@ -63,7 +63,7 @@ training. I was searching online for resources and tutorials and I always came a
 method where the programmer creates a lookback function. I realized this was how the model 
 could predict things in the future. I could’ve done the same but my data could possibly have 
 two earthquakes in the same day and time which would be extremely difficult for the model and 
-me to figure out how to deal with it. 
+me to figure out how to process and handle. 
 - &nbsp;&nbsp;&nbsp;&nbsp; From this learning experience I learned much about machine learning and what to do, but mainly
 what not to do. I figured out the importance of finding or making a dataset with the correct 
 features and how to preprocess them correctly. Learning about and experiencing overfitting is
